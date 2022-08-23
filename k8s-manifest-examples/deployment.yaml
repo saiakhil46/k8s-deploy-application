@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pizza-app-deployment
+  labels:
+    app: pizza-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pizza-app
+  template:
+    metadata:
+      name: pizza-app
+      labels:
+        app: pizza-app
+    spec:
+      containers:
+      - name: pizza-app
+        image: saiakhil46/pizza-app:main-1ffbdf3
+        ports:
+        - containerPort:  80  
+

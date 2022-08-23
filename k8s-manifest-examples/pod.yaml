@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pizza-app
+  labels:
+    app: pizza-app
+spec:
+  containers:
+  - name: pizza-app
+    image: saiakhil46/pizza-app:main-1ffbdf3
+    ports:
+    - containerPort:  80
